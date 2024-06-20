@@ -11,7 +11,7 @@ public class GetPublicCrocodileByIdTests {
 
     @Test
     public void shouldListAPublicCrocodile() {
-        RestAssured.baseURI = "https://test-api.k6.io";
+        RestAssured.baseURI = System.getProperty("test.baseURI");
         
         given().
             pathParams("id", 1).

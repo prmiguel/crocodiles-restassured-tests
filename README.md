@@ -4,14 +4,14 @@
 
 #### Using `Maven`
 ```sh
-mvn test
+mvn -Dtest.baseURI="https://test-api.k6.io" test
 ```
 
 #### Using `org.testng.TestNG`
 ```sh
 mvn package
-java -cp target/test-classes:target/lib/* org.testng.TestNG -testclass api.test.restassured.ListPublicCrocodilesTests
-java -cp target/test-classes:target/lib/* org.testng.TestNG testng.xml
+java -Dtest.baseURI="https://test-api.k6.io" -cp target/test-classes:target/lib/* org.testng.TestNG -testclass api.test.restassured.ListPublicCrocodilesTests
+java -Dtest.baseURI="https://test-api.k6.io" -cp target/test-classes:target/lib/* org.testng.TestNG testng.xml
 ```
 
 #### Using `Maven Plugin`

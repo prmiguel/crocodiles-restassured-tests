@@ -26,6 +26,7 @@ public class App {
         testng.setTestClasses(new Class[] { testClass1, testClass2 });
         LocalReporter reporter = new LocalReporter();
         testng.addListener(reporter);
+        System.setProperty("test.baseURI", "https://test-api.k6.io");
         testng.setVerbose(3);
         testng.run();
         // System.out.println(myclass.getMethods()[0].getName());

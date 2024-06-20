@@ -11,7 +11,7 @@ import static io.restassured.RestAssured.*;
 public class ListPublicCrocodilesTests {
     @Test
     public void shouldListAllPublicCrocodiles() {
-        RestAssured.baseURI = "https://test-api.k6.io";
+        RestAssured.baseURI = System.getProperty("test.baseURI");
         
         given().
         when().
